@@ -1,8 +1,8 @@
 {
-    "name": "ewigedreamer.eventbus.sample",
-    "rootNamespace": "ED",
+    "name": "EwigeDreamer.EventBus.Sample",
+    "rootNamespace": "Ed.EventBus.Samples",
     "references": [
-        "ewigedreamer.eventbus",
+        "EwigeDreamer.EventBus",
         "UniTask"
     ],
     "includePlatforms": [],

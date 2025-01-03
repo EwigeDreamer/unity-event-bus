@@ -1,4 +1,4 @@
-using ED.EventBus;
+using ED.EventBus.Logic;
 using UnityEngine;
 
 namespace Ed.EventBus.Samples

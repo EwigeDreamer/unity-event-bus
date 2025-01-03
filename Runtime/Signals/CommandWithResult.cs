@@ -1,6 +1,5 @@
 using System;
 using ED.EventBus.Base;
-using ED.EventBus.Misc;
 
 namespace ED.EventBus.Signals
 {

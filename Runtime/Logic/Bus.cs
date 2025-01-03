@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using ED.EventBus.Base;
 
-namespace ED.EventBus
+namespace ED.EventBus.Logic
 {
     public static class Bus
     {
