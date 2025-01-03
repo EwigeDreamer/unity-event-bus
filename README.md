@@ -8,4 +8,4 @@ To use this in your Unity project import it from Unity Package Manager. You can 
 
 ## Dependensies
 
-### [Unitask (for async features)](https://github.com/Cysharp/UniTask)
+### [UniTask (for async features)](https://github.com/Cysharp/UniTask)
