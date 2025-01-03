@@ -13,7 +13,13 @@
     "prefs",
     "datamanager"
   ],
-  "samples": [],
+  "samples": [
+    {
+      "displayName": "EventBusSample",
+      "description": "Contains sample of EventBus usage",
+      "path": "Samples~/EventBusSample"
+    }
+  ],
   "author": {
     "name": "Pavel Sborshchikov",
     "email": "ewigedreamer@gmail.com",
