@@ -1,0 +1,22 @@
+{
+  "name": "com.ewigedreamer.eventbus",
+  "version": "1.0.0",
+  "displayName": "ED Unity Event Bus",
+  "description": "A system of game-wide signals and commands.",
+  "unity": "2021.3",
+  "documentationUrl": "",
+  "changelogUrl": "",
+  "licensesUrl": "",
+  "keywords": [
+    "data",
+    "manager",
+    "prefs",
+    "datamanager"
+  ],
+  "samples": [],
+  "author": {
+    "name": "Pavel Sborshchikov",
+    "email": "ewigedreamer@gmail.com",
+    "url": "https://github.com/EwigeDreamer"
+  }
+}

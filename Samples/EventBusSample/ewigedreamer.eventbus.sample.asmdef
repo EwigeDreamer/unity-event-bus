@@ -1,0 +1,23 @@
+{
+    "name": "ewigedreamer.eventbus.sample",
+    "rootNamespace": "ED",
+    "references": [
+        "ewigedreamer.eventbus",
+        "UniTask"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.cysharp.unitask",
+            "expression": "",
+            "define": "EVENTBUS_UNITASK_SUPPORT"
+        }
+    ],
+    "noEngineReferences": false
+}
