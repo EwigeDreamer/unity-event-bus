@@ -17,7 +17,7 @@ namespace ED.EventBus.Base
             return (T)(_signals[typeof(T)] = new T());
         }
 
-        public T GetCammand<T>() where T : BaseCommand, new()
+        public T GetCommand<T>() where T : BaseCommand, new()
         {
             if (typeof(T).DeclaringType != GetType())
                 throw new InvalidOperationException($"Command '{typeof(T).Name}' is not nested in Channel '{GetType().Name}'");
