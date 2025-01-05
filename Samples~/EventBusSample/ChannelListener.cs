@@ -18,10 +18,10 @@ namespace Ed.EventBus.Samples
                 .AddListener(OnLevelUp);
             
             Bus.GetChannel<PlayerChannel>()
-                .GetCammand<PlayerChannel.Respawn>()
+                .GetCommand<PlayerChannel.Respawn>()
                 .AddListener(Respawn);
             Bus.GetChannel<PlayerChannel>()
-                .GetCammand<PlayerChannel.GiveAmmo>()
+                .GetCommand<PlayerChannel.GiveAmmo>()
                 .AddListener(GiveAmmo);
         }
 
@@ -38,10 +38,10 @@ namespace Ed.EventBus.Samples
                 .RemoveListener(OnLevelUp);
             
             Bus.GetChannel<PlayerChannel>()
-                .GetCammand<PlayerChannel.Respawn>()
+                .GetCommand<PlayerChannel.Respawn>()
                 .RemoveListener(Respawn);
             Bus.GetChannel<PlayerChannel>()
-                .GetCammand<PlayerChannel.GiveAmmo>()
+                .GetCommand<PlayerChannel.GiveAmmo>()
                 .RemoveListener(GiveAmmo);
         }
 

@@ -1,6 +1,6 @@
 {
   "name": "com.ewigedreamer.eventbus",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "displayName": "ED Unity Event Bus",
   "description": "A system of game-wide signals and commands.",
   "unity": "2021.3",

@@ -1,6 +1,6 @@
 {
     "name": "EwigeDreamer.EventBus.Sample",
-    "rootNamespace": "Ed.EventBus.Samples",
+    "rootNamespace": "Ed.EventBus",
     "references": [
         "EwigeDreamer.EventBus",
         "UniTask"

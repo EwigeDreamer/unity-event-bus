@@ -8,10 +8,10 @@ namespace Ed.EventBus.Samples
         private void Start()
         {
             Bus.GetChannel<PlayerChannel>()
-                .GetCammand<PlayerChannel.Respawn>()
+                .GetCommand<PlayerChannel.Respawn>()
                 .Call(Vector3.forward, Quaternion.LookRotation(Vector3.back));
             Bus.GetChannel<PlayerChannel>()
-                .GetCammand<PlayerChannel.GiveAmmo>()
+                .GetCommand<PlayerChannel.GiveAmmo>()
                 .Call(10);
         }
     }
