@@ -41,6 +41,11 @@ namespace ED.EventBus.Signals
                 if (cancellationToken.IsCancellationRequested) break;
             }
         }
+
+        internal override void Dispose()
+        {
+            _handlers.Clear();
+        }
     }
     
     public abstract class AsyncCommand<T> : BaseCommand
@@ -73,6 +78,11 @@ namespace ED.EventBus.Signals
                 await handler.Invoke(arg, cancellationToken);
                 if (cancellationToken.IsCancellationRequested) break;
             }
+        }
+
+        internal override void Dispose()
+        {
+            _handlers.Clear();
         }
     }
     
@@ -107,6 +117,11 @@ namespace ED.EventBus.Signals
                 if (cancellationToken.IsCancellationRequested) break;
             }
         }
+
+        internal override void Dispose()
+        {
+            _handlers.Clear();
+        }
     }
     
     public abstract class AsyncCommand<T1, T2, T3> : BaseCommand
@@ -140,6 +155,11 @@ namespace ED.EventBus.Signals
                 if (cancellationToken.IsCancellationRequested) break;
             }
         }
+
+        internal override void Dispose()
+        {
+            _handlers.Clear();
+        }
     }
     
     public abstract class AsyncCommand<T1, T2, T3, T4> : BaseCommand
@@ -172,6 +192,11 @@ namespace ED.EventBus.Signals
                 await handler.Invoke(arg1, arg2, arg3, arg4, cancellationToken);
                 if (cancellationToken.IsCancellationRequested) break;
             }
+        }
+
+        internal override void Dispose()
+        {
+            _handlers.Clear();
         }
     }
 }

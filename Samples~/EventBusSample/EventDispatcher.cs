@@ -1,4 +1,4 @@
-using ED.EventBus.Logic;
+using ED.EventBus;
 using UnityEngine;
 
 namespace Ed.EventBus.Samples
@@ -7,13 +7,13 @@ namespace Ed.EventBus.Samples
     {
         private void Start()
         {
-            Bus.GetChannel<PlayerChannel>()
+            Bus.Global.GetChannel<PlayerChannel>()
                 .GetSignal<PlayerChannel.Spawned>()
                 .Dispatch(Vector3.one, Quaternion.LookRotation(Vector3.right));
-            Bus.GetChannel<PlayerChannel>()
+            Bus.Global.GetChannel<PlayerChannel>()
                 .GetSignal<PlayerChannel.Killed>()
                 .Dispatch(Vector3.left);
-            Bus.GetChannel<PlayerChannel>()
+            Bus.Global.GetChannel<PlayerChannel>()
                 .GetSignal<PlayerChannel.LevelUp>()
                 .Dispatch();
         }

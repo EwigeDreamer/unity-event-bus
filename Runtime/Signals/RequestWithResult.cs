@@ -4,14 +4,14 @@ using ED.EventBus.Misc;
 
 namespace ED.EventBus.Signals
 {
-    public abstract class CommandWithResult<TResult> : BaseCommand
+    public abstract class RequestWithResult<TResult> : BaseRequest
     {
         private Func<TResult> _callback;
 
-        public CommandWithResultSubscriptionHandler<TResult> SetListener(Func<TResult> callback)
+        public RequestWithResultSubscriptionHandler<TResult> SetListener(Func<TResult> callback)
         {
             _callback = callback;
-            return new CommandWithResultSubscriptionHandler<TResult>(this);
+            return new RequestWithResultSubscriptionHandler<TResult>(this);
         }
 
         public void RemoveListener()
@@ -30,14 +30,14 @@ namespace ED.EventBus.Signals
         }
     }
     
-    public abstract class CommandWithResult<T, TResult> : BaseCommand
+    public abstract class RequestWithResult<T, TResult> : BaseRequest
     {
         private Func<T, TResult> _callback;
 
-        public CommandWithResultSubscriptionHandler<T, TResult> SetListener(Func<T, TResult> callback)
+        public RequestWithResultSubscriptionHandler<T, TResult> SetListener(Func<T, TResult> callback)
         {
             _callback = callback;
-            return new CommandWithResultSubscriptionHandler<T, TResult>(this);
+            return new RequestWithResultSubscriptionHandler<T, TResult>(this);
         }
 
         public void RemoveListener()
@@ -56,14 +56,14 @@ namespace ED.EventBus.Signals
         }
     }
     
-    public abstract class CommandWithResult<T1, T2, TResult> : BaseCommand
+    public abstract class RequestWithResult<T1, T2, TResult> : BaseRequest
     {
         private Func<T1, T2, TResult> _callback;
 
-        public CommandWithResultSubscriptionHandler<T1, T2, TResult> SetListener(Func<T1, T2, TResult> callback)
+        public RequestWithResultSubscriptionHandler<T1, T2, TResult> SetListener(Func<T1, T2, TResult> callback)
         {
             _callback = callback;
-            return new CommandWithResultSubscriptionHandler<T1, T2, TResult>(this);
+            return new RequestWithResultSubscriptionHandler<T1, T2, TResult>(this);
         }
 
         public void RemoveListener()
@@ -82,14 +82,14 @@ namespace ED.EventBus.Signals
         }
     }
     
-    public abstract class CommandWithResult<T1, T2, T3, TResult> : BaseCommand
+    public abstract class RequestWithResult<T1, T2, T3, TResult> : BaseRequest
     {
         private Func<T1, T2, T3, TResult> _callback;
 
-        public CommandWithResultSubscriptionHandler<T1, T2, T3, TResult> SetListener(Func<T1, T2, T3, TResult> callback)
+        public RequestWithResultSubscriptionHandler<T1, T2, T3, TResult> SetListener(Func<T1, T2, T3, TResult> callback)
         {
             _callback = callback;
-            return new CommandWithResultSubscriptionHandler<T1, T2, T3, TResult>(this);
+            return new RequestWithResultSubscriptionHandler<T1, T2, T3, TResult>(this);
         }
 
         public void RemoveListener()
@@ -108,14 +108,14 @@ namespace ED.EventBus.Signals
         }
     }
     
-    public abstract class CommandWithResult<T1, T2, T3, T4, TResult> : BaseCommand
+    public abstract class RequestWithResult<T1, T2, T3, T4, TResult> : BaseRequest
     {
         private Func<T1, T2, T3, T4, TResult> _callback;
 
-        public CommandWithResultSubscriptionHandler<T1, T2, T3, T4, TResult> SetListener(Func<T1, T2, T3, T4, TResult> callback)
+        public RequestWithResultSubscriptionHandler<T1, T2, T3, T4, TResult> SetListener(Func<T1, T2, T3, T4, TResult> callback)
         {
             _callback = callback;
-            return new CommandWithResultSubscriptionHandler<T1, T2, T3, T4, TResult>(this);
+            return new RequestWithResultSubscriptionHandler<T1, T2, T3, T4, TResult>(this);
         }
 
         public void RemoveListener()

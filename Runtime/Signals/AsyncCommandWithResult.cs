@@ -25,6 +25,11 @@ namespace ED.EventBus.Signals
         {
             return _callback?.Invoke(cancellationToken) ?? UniTask.FromResult(default(TResult));
         }
+
+        internal override void Dispose()
+        {
+            _callback = null;
+        }
     }
     
     public abstract class AsyncCommandWithResult<T, TResult> : BaseCommand
@@ -44,6 +49,11 @@ namespace ED.EventBus.Signals
         public UniTask<TResult> Call(T arg, CancellationToken cancellationToken = default)
         {
             return _callback?.Invoke(arg, cancellationToken) ?? UniTask.FromResult(default(TResult));
+        }
+
+        internal override void Dispose()
+        {
+            _callback = null;
         }
     }
     
@@ -65,6 +75,11 @@ namespace ED.EventBus.Signals
         {
             return _callback?.Invoke(arg1, arg2, cancellationToken) ?? UniTask.FromResult(default(TResult));
         }
+
+        internal override void Dispose()
+        {
+            _callback = null;
+        }
     }
     
     public abstract class AsyncCommandWithResult<T1, T2, T3, TResult> : BaseCommand
@@ -85,6 +100,11 @@ namespace ED.EventBus.Signals
         {
             return _callback?.Invoke(arg1, arg2, arg3, cancellationToken) ?? UniTask.FromResult(default(TResult));
         }
+
+        internal override void Dispose()
+        {
+            _callback = null;
+        }
     }
     
     public abstract class AsyncCommandWithResult<T1, T2, T3, T4, TResult> : BaseCommand
@@ -104,6 +124,11 @@ namespace ED.EventBus.Signals
         public UniTask<TResult> Call(T1 arg1, T2 arg2, T3 arg3, T4 arg4, CancellationToken cancellationToken = default)
         {
             return _callback?.Invoke(arg1, arg2, arg3, arg4, cancellationToken) ?? UniTask.FromResult(default(TResult));
+        }
+
+        internal override void Dispose()
+        {
+            _callback = null;
         }
     }
 }

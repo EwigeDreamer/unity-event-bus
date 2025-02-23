@@ -23,6 +23,11 @@ namespace ED.EventBus.Signals
         {
             _callback?.Invoke();
         }
+
+        internal override void Dispose()
+        {
+            _callback = null;
+        }
     }
     
     public abstract class Signal<T> : BaseSignal
@@ -43,6 +48,11 @@ namespace ED.EventBus.Signals
         public void Dispatch(T arg)
         {
             _callback?.Invoke(arg);
+        }
+
+        internal override void Dispose()
+        {
+            _callback = null;
         }
     }
     
@@ -65,6 +75,11 @@ namespace ED.EventBus.Signals
         {
             _callback?.Invoke(arg1, arg2);
         }
+
+        internal override void Dispose()
+        {
+            _callback = null;
+        }
     }
     
     public abstract class Signal<T1, T2, T3> : BaseSignal
@@ -86,6 +101,11 @@ namespace ED.EventBus.Signals
         {
             _callback?.Invoke(arg1, arg2, arg3);
         }
+
+        internal override void Dispose()
+        {
+            _callback = null;
+        }
     }
     
     public abstract class Signal<T1, T2, T3, T4> : BaseSignal
@@ -106,6 +126,11 @@ namespace ED.EventBus.Signals
         public void Dispatch(T1 arg1, T2 arg2, T3 arg3, T4 arg4)
         {
             _callback?.Invoke(arg1, arg2, arg3, arg4);
+        }
+
+        internal override void Dispose()
+        {
+            _callback = null;
         }
     }
 }

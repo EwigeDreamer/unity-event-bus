@@ -1,4 +1,4 @@
-using ED.EventBus.Logic;
+using ED.EventBus;
 using UnityEngine;
 
 namespace Ed.EventBus.Samples
@@ -7,10 +7,10 @@ namespace Ed.EventBus.Samples
     {
         private void Start()
         {
-            Bus.GetChannel<PlayerChannel>()
+            Bus.Global.GetChannel<PlayerChannel>()
                 .GetCommand<PlayerChannel.Respawn>()
                 .Call(Vector3.forward, Quaternion.LookRotation(Vector3.back));
-            Bus.GetChannel<PlayerChannel>()
+            Bus.Global.GetChannel<PlayerChannel>()
                 .GetCommand<PlayerChannel.GiveAmmo>()
                 .Call(10);
         }

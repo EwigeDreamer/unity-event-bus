@@ -1,3 +1,8 @@
+## [1.1.0] - 2025-02-24
+### Added
+- RequestWithResult
+- CommandWithResult subscription handler
+
 ## [1.0.3] - 2025-01-05
 ### Fixes
 - Fix sample

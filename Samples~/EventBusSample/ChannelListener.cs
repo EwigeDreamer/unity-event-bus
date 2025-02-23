@@ -1,4 +1,4 @@
-using ED.EventBus.Logic;
+using ED.EventBus;
 using UnityEngine;
 
 namespace Ed.EventBus.Samples
@@ -7,40 +7,40 @@ namespace Ed.EventBus.Samples
     {
         private void Awake()
         {
-            Bus.GetChannel<PlayerChannel>()
+            Bus.Global.GetChannel<PlayerChannel>()
                 .GetSignal<PlayerChannel.Spawned>()
                 .AddListener(OnSpawn);
-            Bus.GetChannel<PlayerChannel>()
+            Bus.Global.GetChannel<PlayerChannel>()
                 .GetSignal<PlayerChannel.Killed>()
                 .AddListener(OnKill);
-            Bus.GetChannel<PlayerChannel>()
+            Bus.Global.GetChannel<PlayerChannel>()
                 .GetSignal<PlayerChannel.LevelUp>()
                 .AddListener(OnLevelUp);
             
-            Bus.GetChannel<PlayerChannel>()
+            Bus.Global.GetChannel<PlayerChannel>()
                 .GetCommand<PlayerChannel.Respawn>()
                 .AddListener(Respawn);
-            Bus.GetChannel<PlayerChannel>()
+            Bus.Global.GetChannel<PlayerChannel>()
                 .GetCommand<PlayerChannel.GiveAmmo>()
                 .AddListener(GiveAmmo);
         }
 
         private void OnDestroy()
         {
-            Bus.GetChannel<PlayerChannel>()
+            Bus.Global.GetChannel<PlayerChannel>()
                 .GetSignal<PlayerChannel.Spawned>()
                 .RemoveListener(OnSpawn);
-            Bus.GetChannel<PlayerChannel>()
+            Bus.Global.GetChannel<PlayerChannel>()
                 .GetSignal<PlayerChannel.Killed>()
                 .RemoveListener(OnKill);
-            Bus.GetChannel<PlayerChannel>()
+            Bus.Global.GetChannel<PlayerChannel>()
                 .GetSignal<PlayerChannel.LevelUp>()
                 .RemoveListener(OnLevelUp);
             
-            Bus.GetChannel<PlayerChannel>()
+            Bus.Global.GetChannel<PlayerChannel>()
                 .GetCommand<PlayerChannel.Respawn>()
                 .RemoveListener(Respawn);
-            Bus.GetChannel<PlayerChannel>()
+            Bus.Global.GetChannel<PlayerChannel>()
                 .GetCommand<PlayerChannel.GiveAmmo>()
                 .RemoveListener(GiveAmmo);
         }
